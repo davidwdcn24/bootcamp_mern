@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
+import Tasks from './components/tasks/Tasks'
 
 // function App() {
 //   return (
@@ -27,12 +28,13 @@ function App() {
     <div>
       <h1>Hello Dojo!</h1>
       <h3>Things I need to do:</h3>
-      <ul>
+      {/* <ul>
         <li>Learn React</li>
         <li>Climb Mt. Everest</li>
         <li>Run a marathon</li>
         <li>Feed the dogs</li>
-      </ul>
+      </ul> */}
+      <Tasks></Tasks>
     </div>
   );
 }
