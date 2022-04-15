@@ -31,6 +31,7 @@ const Form = () => {
 
     const handleChange = evt => {
         const { name, value } = evt.target;
+
         dispatch({
             field: name,
             text: value,

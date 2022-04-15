@@ -47,9 +47,6 @@ const Input = ({ id, inputType, text, setInput, valPass }) => {
                     placeholder={placeHolder} onChange={validateField} />
             </div>
             <div className={styles.errorReactValidate}>{errorMsg}</div>
-            {/* <label htmlFor={id} className='form-label'>{text}</label>
-            <input type={inputType} className='form-control' name={id} id={id}
-                placeholder={placeHolder} onChange={e => { setInput(e.target.value) }} /> */}
         </div>
     )
 }
