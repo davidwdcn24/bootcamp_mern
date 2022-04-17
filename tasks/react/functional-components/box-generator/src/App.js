@@ -19,14 +19,12 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const updateColors = (value) => {
-    console.log("colors", state.colors);
     const newColors = state.colors;
     newColors.push(value);
     dispatch({
       name: "colors",
       value: newColors
     })
-    console.log("colors", state.colors);
   }
 
   const updateLen = (value) => {

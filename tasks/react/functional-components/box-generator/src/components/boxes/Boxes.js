@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Boxes = (props) => {
-    console.log(props);
     return (
         <div className='d-flex flex-wrap'>
             {
