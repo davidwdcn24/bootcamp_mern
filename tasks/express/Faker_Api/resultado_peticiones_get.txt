@@ -1,0 +1,53 @@
+Llamanda a la ruta: http://localhost:8000/api/users/new
+Petición: get
+Resultado:
+{
+    "id": "2ae90c4f7ebacb70321afaaf",
+    "firstName": "Cassandre",
+    "lastName": "Deckow",
+    "phoneNumber": "268.324.9117 x165",
+    "email": "Lauriane76@yahoo.com",
+    "password": "P9wXd1bXE5gpPEt"
+}
+
+***********************************************************************************
+Llamanda a la ruta: http://localhost:8000/api/companies/new
+Petición: get
+Resultado:
+{
+    "id": "df93aa05debdea760c8716be",
+    "name": "Koepp Inc",
+    "direction": {
+        "street": "Runolfsdottir Squares",
+        "city": "South Shaynahaven",
+        "state": "Washington",
+        "zipCode": "98985-0098",
+        "country": "Bahamas"
+    }
+}
+
+*********************************************************************************
+Llamanda a la ruta: http://localhost:8000/api/user/company
+Petición: get
+Resultado:
+{
+    "user": {
+        "id": "f7ee73eb96ec6abccc25ac94",
+        "firstName": "Ashlynn",
+        "lastName": "Predovic",
+        "phoneNumber": "1-555-523-6742",
+        "email": "Carol38@hotmail.com",
+        "password": "kJ7JxCsurwonJn5"
+    },
+    "company": {
+        "id": "451d56fec8884100b7ea1aac",
+        "name": "Hackett, Maggio and Leannon",
+        "direction": {
+            "street": "Marty Trace",
+            "city": "New Germainefurt",
+            "state": "Iowa",
+            "zipCode": "54955",
+            "country": "Timor-Leste"
+        }
+    }
+}
