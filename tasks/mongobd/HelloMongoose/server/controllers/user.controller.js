@@ -1,15 +1,26 @@
 const User = require("../models/user.model");
 
 module.exports.findAllUsers = (req, res) => {
-  User.find()
+  User.count()
     .then(allDaUsers => res.json({ users: allDaUsers }))
     .catch(err => res.json({ message: "Something went wrong", error: err }));
+  // User.find()
+  //   .then(allDaUsers => {
+  //     // Revisa si existen datos.
+  //     if (allDaUsers.length === 0) {
+  //       return Promise.reject('No existen datos.');
+  //     }
+
+  //     return allDaUsers;
+  //   })
+  //   .then(allDaUsers => res.json({ users: allDaUsers }))
+  //   .catch(err => res.json({ message: "Something went wrong", error: err }));
 };
 
 module.exports.findOneSingleUser = (req, res) => {
-	User.findOne({ _id: req.params.id })
-		.then(oneSingleUser => res.json({ user: oneSingleUser }))
-		.catch(err => res.json({ message: "Something went wrong", error: err }));
+  User.findOne({ _id: req.params.id })
+    .then(oneSingleUser => res.json({ user: oneSingleUser }))
+    .catch(err => res.json({ message: "Something went wrong", error: err }));
 };
 
 module.exports.createNewUser = (req, res) => {
