@@ -1,0 +1,133 @@
+url: http://localhost:8000/api/jokes/
+petición: GET
+resultado: 
+{
+    "jokes": [
+        {
+            "_id": "626b4205caaf2489a1f476a6",
+            "setup": "Where do programmers hang out?",
+            "punchline": "The Foo Bar",
+            "__v": 0
+        },
+        {
+            "_id": "626b425dcaaf2489a1f476a8",
+            "setup": "A SQL query walks into a bar, wals up to two tables an asks.",
+            "punchline": "Can I join you?",
+            "__v": 0
+        },
+        {
+            "_id": "626b429acaaf2489a1f476aa",
+            "setup": "What kind of music do planets listen to?",
+            "punchline": "Nep-tunes.",
+            "__v": 0
+        },
+        {
+            "_id": "626b485769b49c29e30a59b8",
+            "setup": "Setup 3 mod?",
+            "punchline": "Punchline 1.",
+            "__v": 0
+        },
+        {
+            "_id": "626b486269b49c29e30a59bc",
+            "setup": "Setup 3?",
+            "punchline": "Punchline 3.",
+            "__v": 0
+        }
+    ]
+}
+
+
+
+url: http://localhost:8000/api/jokes/random
+petición: GET
+resultado: 
+{
+    "jokes": [
+        {
+            "_id": "626b425dcaaf2489a1f476a8",
+            "setup": "A SQL query walks into a bar, wals up to two tables an asks.",
+            "punchline": "Can I join you?",
+            "__v": 0
+        }
+    ]
+}
+
+
+
+
+
+url: http://localhost:8000/api/jokes/626b425dcaaf2489a1f476a8
+petición: GET
+resultado: 
+{
+    "joke": {
+        "_id": "626b425dcaaf2489a1f476a8",
+        "setup": "A SQL query walks into a bar, wals up to two tables an asks.",
+        "punchline": "Can I join you?",
+        "__v": 0
+    }
+}
+
+
+
+
+
+
+
+
+url: http://localhost:8000/api/jokes/new
+petición: POST
+body:
+{
+    "setup": "Where do programmers hang out?",
+    "punchline": "The Foo Bar"
+}
+resultado: 
+{
+    "joke": {
+        "setup": "Setup 3?",
+        "punchline": "Punchline 3.",
+        "_id": "626b486269b49c29e30a59bc",
+        "__v": 0
+    }
+}
+
+
+
+
+
+
+
+url: http://localhost:8000/api/jokes/update/626b485769b49c29e30a59b8
+petición: PUT
+body:
+{
+    "setup": "Setup 3 mod?"
+}
+resultado: 
+Si el código del status es 204, no devuelve nada.
+Si el código del status es 200, devuelve:
+{
+    "joke": {
+        "_id": "626b485769b49c29e30a59b8",
+        "setup": "Setup 3 mod?",
+        "punchline": "Punchline 1.",
+        "__v": 0
+    }
+}
+
+
+
+
+
+url: http://localhost:8000/api/jokes/
+petición: GET
+resultado: 
+Si el código del status es 204, no devuelve nada.
+Si el código del status es 200, devuelve:
+{
+    "result": {
+        "acknowledged": true,
+        "deletedCount": 1
+    }
+}
