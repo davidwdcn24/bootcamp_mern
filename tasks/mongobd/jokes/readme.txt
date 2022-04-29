@@ -1,3 +1,5 @@
+El resultado de las ejecuciones está en el archivo ResultadoEjecucion.txt.
+
 // Se puede incluir esto en las cabeceras.
 res.set("Location", `http://${req.headers["host"]}/api/jokes/${response._id}`);
 
