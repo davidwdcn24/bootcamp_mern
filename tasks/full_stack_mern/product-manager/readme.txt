@@ -1,0 +1,1 @@
+Los resultados de consultas de postman están en el archivo responses.txt

@@ -1,0 +1,61 @@
+URL: http://localhost:8000/api/products
+Petición: GET
+Resultado:
+{
+    "persons": [
+        {
+            "_id": "626c918e7957f41904d818d8",
+            "title": "Producto postman 1",
+            "price": 100,
+            "description": "Descripción de producto postman 1",
+            "createdAt": "2022-04-30T01:31:58.991Z",
+            "updatedAt": "2022-04-30T01:31:58.991Z",
+            "__v": 0
+        },
+        {
+            "_id": "626c91afa8e61097ae0001e9",
+            "title": "Producto 1",
+            "price": 100,
+            "description": "Producto 1",
+            "createdAt": "2022-04-30T01:32:31.952Z",
+            "updatedAt": "2022-04-30T01:32:31.952Z",
+            "__v": 0
+        },
+        {
+            "_id": "626c91dea8e61097ae0001eb",
+            "title": "Producto 2",
+            "price": 200,
+            "description": "Producto 2",
+            "createdAt": "2022-04-30T01:33:18.943Z",
+            "updatedAt": "2022-04-30T01:33:18.943Z",
+            "__v": 0
+        },
+        {
+            "_id": "626c91f6a8e61097ae0001ed",
+            "title": "Producto postman 2",
+            "price": 200,
+            "description": "Descripción de producto postman 2",
+            "createdAt": "2022-04-30T01:33:42.555Z",
+            "updatedAt": "2022-04-30T01:33:42.555Z",
+            "__v": 0
+        },
+        {
+            "_id": "626c984eeb39877d0aa38497",
+            "title": "Producto 4.",
+            "price": 400,
+            "description": "Descripción del producto 4.",
+            "createdAt": "2022-04-30T02:00:46.249Z",
+            "updatedAt": "2022-04-30T02:00:46.249Z",
+            "__v": 0
+        },
+        {
+            "_id": "626c9daceb39877d0aa3849a",
+            "title": "Producto postman 3",
+            "price": 300,
+            "description": "Descripción de producto postman 3",
+            "createdAt": "2022-04-30T02:23:40.331Z",
+            "updatedAt": "2022-04-30T02:23:40.331Z",
+            "__v": 0
+        }
+    ]
+}
