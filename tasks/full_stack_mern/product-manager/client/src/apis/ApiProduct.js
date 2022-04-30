@@ -13,9 +13,24 @@ const getProduct = (params) => {
 }
 
 const addProduct = (body) => {
-    return axios.post("http://localhost:8000/api/products/add", body);
+    return axios.post("http://localhost:8000/api/products/", body);
 }
 
-const productMethods = { getAllProducts, getProduct, addProduct };
+const editProduct = (body) => {
+    let url = "http://localhost:8000/api/products/";
+    if (body) {
+        url += body._id;
+    }
+
+    return axios.put(url, body);
+}
+
+const removeProduct = (id) => {
+    let url = "http://localhost:8000/api/products/" + id;
+
+    return axios.delete(url);
+}
+
+const productMethods = { getAllProducts, getProduct, addProduct, editProduct, removeProduct };
 
 export default productMethods;

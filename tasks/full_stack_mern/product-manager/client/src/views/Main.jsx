@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ProductForm from '../controllers/product/ProductForm';
-import ProductList from '../controllers/product/ProductList';
+import ProductForm from '../components/product/ProductForm';
+import ProductList from '../components/product/ProductList';
 import productMethods from '../apis/ApiProduct'
 
 const Main = () => {
@@ -21,10 +21,18 @@ const Main = () => {
             });
     }, []);
 
+    const addProductDom = (product) => {
+        setProducts([...products, product]);
+    }
+
+    const deleteProductDom = (id) => {
+        setProducts(products.filter(product => product._id !== id));
+    }
+
     return (
         <div>
-            <ProductForm/>
-            {loaded && <ProductList list={products}/>}
+            <ProductForm addProductDom={addProductDom} petition={"post"} />
+            {loaded && <ProductList list={products} deleteProductDom={deleteProductDom}/>}
         </div>
     )
 }
