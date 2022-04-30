@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const Detail = () => {
@@ -16,6 +16,11 @@ const Detail = () => {
         <div>
             <p>First Name: {person.firstName}</p>
             <p>Last Name: {person.lastName}</p>
+            <p>
+            <Link to={"/people/" + person._id + "/edit"}>
+                Edit
+            </Link>
+            </p>
         </div>
     )
 }
