@@ -38,7 +38,7 @@ const PersonForm = () => {
     return (
         <form onSubmit={submitHandler}>
             <div className='row mt-3 text-center'>
-                <h1>Product Manager</h1>
+                <h3>Product Manager</h3>
             </div>
             {result.msg.length > 0 && (
                 <div className='alert alert-warning mt-3'>{result.msg}</div>
