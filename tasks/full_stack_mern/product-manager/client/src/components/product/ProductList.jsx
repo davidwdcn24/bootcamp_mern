@@ -1,15 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import productMethods from '../../apis/ApiProduct'
+import DeleteProduct from './DeleteProduct';
 
 const ProductList = ({ list, deleteProductDom }) => {
-    const { removeProduct } = productMethods;
     const navigate = useNavigate();
-
-    const deleteProduct = (id) => {
-        removeProduct(id);
-        deleteProductDom(id);
-    }
 
     return (
         <div className='border-top border-secondary mt-3'>
@@ -27,9 +21,8 @@ const ProductList = ({ list, deleteProductDom }) => {
                                         <button type='button'
                                             className='btn btn-secondary'
                                             onClick={() => navigate(`/detail/${product._id}`, {})}>Detail</button>
-                                        <button type='button'
-                                            className='btn btn-secondary ms-2'
-                                            onClick={() => deleteProduct(product._id)}>Delete</button>
+                                        <DeleteProduct productId={product._id} 
+                                            successCallBack={() => deleteProductDom(product._id)}></DeleteProduct>
                                         <span className='ms-2'>{product.title}</span>
                                     </div>
                                 </li>

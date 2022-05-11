@@ -1,11 +1,13 @@
 import axios from 'axios';
 
+const urlBase = "http://localhost:8000/api/products/";
+
 const getAllProducts = () => {
-    return axios.get("http://localhost:8000/api/products/");
+    return axios.get(urlBase);
 }
 
 const getProduct = (params) => {
-    let url = "http://localhost:8000/api/products/";
+    let url = urlBase;
     if (params) {
         url += params.id;
     }
@@ -13,11 +15,11 @@ const getProduct = (params) => {
 }
 
 const addProduct = (body) => {
-    return axios.post("http://localhost:8000/api/products/", body);
+    return axios.post(urlBase, body);
 }
 
 const editProduct = (body) => {
-    let url = "http://localhost:8000/api/products/";
+    let url = urlBase;
     if (body) {
         url += body._id;
     }
@@ -26,7 +28,7 @@ const editProduct = (body) => {
 }
 
 const removeProduct = (id) => {
-    let url = "http://localhost:8000/api/products/" + id;
+    let url = urlBase + id;
 
     return axios.delete(url);
 }
