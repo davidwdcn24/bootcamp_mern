@@ -19,7 +19,7 @@ module.exports.createAuthor = (request, response) => {
 };
 
 module.exports.updateAuthor = (request, response) => {
-    Author.findOneAndUpdate({ _id: request.params.id }, request.body, { new: true })
+    Author.findOneAndUpdate({ _id: request.params.id }, request.body, { runValidators: true, new: true })
         .then(author => response.status(200).json(author))
         .catch(err => response.status(400).json({ message: "Se presentó un error al intentar actualizar la información del autor.", error: err }));
 };
