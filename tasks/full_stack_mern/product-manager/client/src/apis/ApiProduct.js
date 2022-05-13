@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const urlBase = "http://54.175.241.107:8000/api/products/";
+const urlBase = "http://localhost:8000/api/products/";
 
 const getAllProducts = () => {
     return axios.get(urlBase);
