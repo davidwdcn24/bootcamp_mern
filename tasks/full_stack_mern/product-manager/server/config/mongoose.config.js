@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://usrProductManager:123ProductManager123@clusterdcproductmanager.srtd9.mongodb.net/productManagerDb", {
+mongoose.connect("mongodb://localhost:27017/productManagerDb", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
