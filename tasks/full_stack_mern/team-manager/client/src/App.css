@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  border:0;
+  background-color: #eeeeee;
+}
+
+.App-root {
+  height: calc(100vh - 65px);
+  width: 100vw;
+  padding: 25px;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+.App-header {
+  color: #175694;
+  font-size: 2rem;
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+
+.App-header > a {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-body {
+  border: 2px solid #282c34;
+  height: 100%;
+  overflow: auto;
+  padding: 25px;
+}
